@@ -12,6 +12,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * **image inspect:** `mocker image inspect` and `mocker inspect --type=image` now return Docker-compatible `ImageInspect` JSON arrays with PascalCase keys instead of the previous lowercase `ImageInfo` object shape.
 * **MockerKit:** `ImageManager.inspect(_:platform:)` returns `ImageInspect` instead of `ImageInfo`.
 
+## [0.7.1](https://github.com/us/mocker/compare/v0.7.0...v0.7.1) (2026-07-04)
+
+
+### Features
+
+* **compose:** accept --file long flag for Docker parity ([051ff97](https://github.com/us/mocker/commit/051ff970a8cfc835565418c7fd8aee9f78d1894c))
+* **compose:** read stdin content from -f - ([ea462d5](https://github.com/us/mocker/commit/ea462d55a7fbedc6b613478ec5a8f8f793850597))
+
+
+### Bug Fixes
+
+* **compose:** anchor bind-mount sources to --project-directory ([9df29ad](https://github.com/us/mocker/commit/9df29adf68df3b16b7be0484dd72511bc1b21a58))
+* **compose:** reconcile up -d by service config hash ([25fc6df](https://github.com/us/mocker/commit/25fc6df58b1e5fc2d4f141d542ac1f1cb09873a8))
+* **compose:** start stopped containers on up -d reconcile ([382190a](https://github.com/us/mocker/commit/382190afe59e392f9321bd630c4815d75354484c))
+* **runtime:** honor --memory and compose mem_limit ([cc57399](https://github.com/us/mocker/commit/cc573990560f1770aace4d03b18ab35df147ec51)), closes [#62](https://github.com/us/mocker/issues/62)
+
 ## [0.7.0](https://github.com/us/mocker/compare/v0.6.1...v0.7.0) (2026-07-03)
 
 
